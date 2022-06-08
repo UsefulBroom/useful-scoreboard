@@ -7,4 +7,5 @@ Each Milestone will be posted to the Wiki, I will have a referance located below
 
 ## Updates:
 
-So empty... but wait! more is coming soon!!
+Update 1.0.1:<br>
+Design Templete completed
