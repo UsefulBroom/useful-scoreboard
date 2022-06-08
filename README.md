@@ -7,5 +7,5 @@ Each Milestone will be posted to the Wiki, I will have a referance located below
 
 ## Updates:
 
-Update 1.0.1:<br>
+6/8/2022 Update 1.0.1:<br>
 Design Templete completed
