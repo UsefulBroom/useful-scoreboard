@@ -9,3 +9,6 @@ Each Milestone will be posted to the Wiki, I will have a referance located below
 
 6/8/2022 Update 1.0.1:<br>
 Design Templete completed
+
+6/13/2022 Update: <br>
+I spent the last couple days doing some research. A few of the languages I'm trying to incorperate are totally new to me. I am hoping to get a 'placeholder' up and running tomorrow. This week is kind of heavy on homework so I'll keep things posted here.
