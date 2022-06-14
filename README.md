@@ -12,3 +12,6 @@ Design Templete completed
 
 6/13/2022 Update: <br>
 I spent the last couple days doing some research. A few of the languages I'm trying to incorperate are totally new to me. I am hoping to get a 'placeholder' up and running tomorrow. This week is kind of heavy on homework so I'll keep things posted here.
+
+6/14/2022 Update: <br>
+I stood up Next.JS, Tailwind, and React-Query. In install only, I also built a dev branch but there isn't really any thing to show yet. So, I'm keeping it locally until I get something framed up. 
