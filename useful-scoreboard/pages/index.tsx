@@ -1,13 +1,14 @@
-import type { NextPage } from 'next'
+import { Fragment } from 'react';
+import Head from 'next/head';
+import { HelloWorld } from '@app/components/HelloWorld';
 
-const Home: NextPage = () => {
-  return (
-    <div className='flex flex-col text-center'>
-      <h1 className='text-3xl text-red-400 font-bold underline'>
-        This is the start of the Next.JS app
-      </h1>
-    </div>
-  )
-}
+const IndexPage = () => (
+  <Fragment>
+    <Head>
+      <title>Next SaaS App</title>
+    </Head>
+    <HelloWorld />
+  </Fragment>
+);
 
-export default Home
+export default IndexPage;

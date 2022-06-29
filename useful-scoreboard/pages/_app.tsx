@@ -1,9 +1,46 @@
-import React from 'react'
-import type { AppProps } from 'next/app'
-import '../styles/globals.css'
+import { FunctionComponent, useEffect } from 'react';
+import { DefaultSeo } from 'next-seo';
+import { ThemeProvider } from 'next-themes';
+import { AppProps as Props } from 'next/app';
+import { useRouter } from 'next/router';
+import * as fathom from 'fathom-client';
+import 'tailwindcss/tailwind.css';
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
-}
+const App: FunctionComponent<Props> = ({ Component, pageProps }) => {
+  const router = useRouter();
 
-export default MyApp
+  useEffect(() => {
+    fathom.load(process.env.NEXT_PUBLIC_FATHOM_CODE, {
+      includedDomains: [process.env.NEXT_PUBLIC_FATHOM_DOMAIN],
+    });
+
+    router.events.on('routeChangeComplete', fathom.trackPageview);
+
+    return () => {
+      router.events.off('routeChangeComplete', fathom.trackPageview);
+    };
+  }, []);
+
+  return (
+    <ThemeProvider defaultTheme="system" attribute="class">
+      <DefaultSeo
+        titleTemplate="%s | Your App"
+        defaultTitle="Your App"
+        openGraph={{
+          type: 'website',
+          locale: 'en_US',
+          url: 'https://yourdomain.com/',
+          site_name: 'Your APp',
+        }}
+        twitter={{
+          handle: '@yourtwitter',
+          site: '@yourtwitter',
+          cardType: 'summary_large_image',
+        }}
+      />
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
+};
+
+export default App;
